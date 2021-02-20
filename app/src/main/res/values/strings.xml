@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="splash_message">App is loading…</string>
+    <string name="note_list_title">Your notes</string>
+    <string name="util_add_button">Add item</string>
+    <string name="action_save_note">Save Note</string>
+    <string name="title_note_creation">Note creation</string>
+    <string name="hint_text_input">Text</string>
+    <string name="util_is_primary">Is primary</string>
+    <string name="error_required_field">This field is required</string>
+</resources>
