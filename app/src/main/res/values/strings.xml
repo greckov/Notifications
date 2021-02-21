@@ -8,4 +8,8 @@
     <string name="hint_text_input">Text</string>
     <string name="util_is_primary">Is primary</string>
     <string name="error_required_field">This field is required</string>
+    <string name="menu_clear_all">Clear All</string>
+    <string name="menu_deleted_notes">Deleted notes</string>
+    <string name="btn_recover_selected">Recover selected</string>
+    <string name="title_your_deleted_notes">Your deleted notes</string>
 </resources>

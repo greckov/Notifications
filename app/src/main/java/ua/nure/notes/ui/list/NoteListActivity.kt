@@ -1,17 +1,15 @@
 package ua.nure.notes.ui.list
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Database
 import org.koin.android.viewmodel.ext.android.viewModel
 import ua.nure.notes.R
 import ua.nure.notes.database.DatabaseId
 import ua.nure.notes.databinding.ActivityNoteListBinding
 import ua.nure.notes.ui.add.AddNoteActivity
+import ua.nure.notes.ui.list.deleted.DeletedNotesActivity
 import ua.nure.notes.ui.view.NoteViewActivity
 
 class NoteListActivity: AppCompatActivity() {
@@ -27,6 +25,10 @@ class NoteListActivity: AppCompatActivity() {
             vm.onDeleteAllItems()
             true
         }
+        R.id.btn_deleted_notes -> {
+            startActivity(DeletedNotesActivity.toBundle(this))
+            true
+        }
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -39,10 +41,6 @@ class NoteListActivity: AppCompatActivity() {
 
         vm.noteListLiveData.observe(this) { data ->
             listAdapter.submitList(data)
-        }
-
-        vm.deleteEnabledLiveData.observe(this) { show ->
-            // TODO: Handle clear all button disabling or enabling
         }
 
         binding.listNotes.adapter = listAdapter

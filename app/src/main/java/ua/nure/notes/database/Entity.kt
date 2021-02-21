@@ -11,5 +11,7 @@ data class NoteItem(
     val timestamp: Long,
     val text: String,
     @ColumnInfo(name = "is_primary")
-    val isPrimary: Boolean
+    val isPrimary: Boolean,
+    @ColumnInfo(name = "is_deleted")
+    val isDeleted: Boolean = false
 )

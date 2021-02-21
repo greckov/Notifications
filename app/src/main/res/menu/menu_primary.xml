@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/btn_delete_all_notes"
-        android:title="Clear All"
+        android:title="@string/menu_clear_all"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/btn_deleted_notes"
+        android:title="@string/menu_deleted_notes"
         app:showAsAction="ifRoom" />
 </menu>

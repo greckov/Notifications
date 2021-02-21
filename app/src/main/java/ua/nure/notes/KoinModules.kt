@@ -6,6 +6,7 @@ import org.koin.dsl.module
 import ua.nure.notes.database.AppDatabase
 import ua.nure.notes.ui.add.AddNoteViewModel
 import ua.nure.notes.ui.list.NoteListViewModel
+import ua.nure.notes.ui.list.deleted.DeletedNotesViewModel
 import ua.nure.notes.ui.view.NoteViewViewModel
 
 val databaseModule = module {
@@ -22,4 +23,5 @@ val viewModelModule = module {
     viewModel { NoteListViewModel(get()) }
     viewModel { AddNoteViewModel(get()) }
     viewModel { NoteViewViewModel(get()) }
+    viewModel { DeletedNotesViewModel(get()) }
 }
