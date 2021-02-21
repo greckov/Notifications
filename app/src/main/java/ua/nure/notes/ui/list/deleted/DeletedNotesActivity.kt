@@ -12,6 +12,8 @@ class DeletedNotesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Show Back button in action bar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val binding = ActivityDeletedNotesBinding.inflate(layoutInflater)
         val listAdapter = DeletedNotesAdapter()
@@ -25,6 +27,11 @@ class DeletedNotesActivity : AppCompatActivity() {
             vm.onRecoverSelectedNotes()
         }
         setContentView(binding.root)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     companion object {

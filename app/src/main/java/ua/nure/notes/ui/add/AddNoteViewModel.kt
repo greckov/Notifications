@@ -11,8 +11,8 @@ import ua.nure.notes.database.NoteItem
 import java.util.concurrent.TimeUnit
 
 class AddNoteViewModel(private val noteDao: NoteDao) : ViewModel() {
-    private val _isPrimaryLiveData = MutableLiveData<Boolean>()
-    val isPrimaryLiveData: LiveData<Boolean> = _isPrimaryLiveData
+    private var isPrimary = false
+
     private val _textLiveData = MutableLiveData<String>()
     val text get() = _textLiveData.value.orEmpty()
     private val _textValidLiveData = MutableLiveData<Boolean>()
@@ -27,7 +27,7 @@ class AddNoteViewModel(private val noteDao: NoteDao) : ViewModel() {
     }
 
     fun setPrimaryState(isPrimary: Boolean) {
-        _isPrimaryLiveData.value = isPrimary
+        this.isPrimary = isPrimary
     }
 
     fun onSaveNote() {
@@ -40,7 +40,7 @@ class AddNoteViewModel(private val noteDao: NoteDao) : ViewModel() {
             noteDao.createNote(NoteItem(
                 timestamp = TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis()),
                 text = text,
-                isPrimary= isPrimaryLiveData.value ?: false
+                isPrimary= isPrimary
             ))
 
             _savedLiveData.postValue(true)
