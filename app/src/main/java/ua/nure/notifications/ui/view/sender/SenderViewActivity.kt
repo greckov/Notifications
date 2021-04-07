@@ -24,7 +24,7 @@ class SenderViewActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        val userId = intent.getIntExtra(ITEM_ID_ARG, 0)
+        val userId = intent.getLongExtra(ITEM_ID_ARG, 0)
         vm.setOnDataCallback(userId) { user ->
             binding.txtUsername.text = getString(R.string.title_user_name, user.username)
             binding.txtFullname.text = getString(R.string.field_user_fullname, user.fullName)

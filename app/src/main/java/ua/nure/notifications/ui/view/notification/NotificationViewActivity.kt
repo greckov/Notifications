@@ -22,7 +22,7 @@ class NotificationViewActivity : AppCompatActivity() {
         val binding = ActivityViewNotificationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val notificationId = intent.getIntExtra(ITEM_ID_ARG, 0)
+        val notificationId = intent.getLongExtra(ITEM_ID_ARG, 0)
 
         vm.setOnDataCallback(notificationId) { notification ->
             binding.txtTitle.text = getString(R.string.title_notification_name, notificationId)

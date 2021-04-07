@@ -7,13 +7,13 @@ import androidx.room.*
 @Dao
 interface UserDAO {
     @Query("SELECT * FROM users WHERE id=:userId")
-    suspend fun getUserById(userId: Int): UserItem
+    suspend fun getUserById(userId: DatabaseId): UserItem
 
     @Query("SELECT * FROM users ORDER BY created_at_ts LIMIT 1")
     suspend fun getLastCreatedUser(): UserItem?
 
     @Insert
-    suspend fun createNewUser(user: UserItem)
+    suspend fun createNewUser(user: UserItem): Long
 
     @Query("SELECT username FROM users WHERE id = :user_id")
     suspend fun getUsernameById(user_id: DatabaseId): String

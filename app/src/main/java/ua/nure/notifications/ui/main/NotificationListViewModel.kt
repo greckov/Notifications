@@ -46,7 +46,7 @@ class NotificationListViewModel(
                     age = 25,
                     createdAtTs = getCurrentUnixTime()
                 )
-                userDao.createNewUser(lastUser)
+                lastUser.id = userDao.createNewUser(lastUser)
             }
 
             val notificationsToCreate = ArrayList<NotificationItem>(5)
