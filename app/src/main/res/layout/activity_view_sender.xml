@@ -14,7 +14,6 @@
         android:src="@drawable/ic_user"
         android:layout_marginTop="@dimen/small_pad"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,11 +22,10 @@
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        android:layout_marginTop="@dimen/small_pad"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
-        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2"
         tools:text="User: @test" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -42,9 +40,9 @@
         android:id="@+id/appCompatTextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/medium_pad"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username"
         tools:text="fullname: test user" />
 
     <androidx.appcompat.widget.AppCompatTextView

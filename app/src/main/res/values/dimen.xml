@@ -2,4 +2,5 @@
 <resources>
     <dimen name="small_pad">15dp</dimen>
     <dimen name="medium_pad">50dp</dimen>
+    <dimen name="corner_default">10dp</dimen>
 </resources>

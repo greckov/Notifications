@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
+    android:background="@color/list_item_bg"
     android:id="@+id/group_notification_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:padding="@dimen/small_pad"
+    tools:layout_marginTop="10dp">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_notification_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
         tools:text="Happy birthday to you!" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_pad"
         android:text="@string/btn_delete" />
 </androidx.appcompat.widget.LinearLayoutCompat>

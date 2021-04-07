@@ -1,7 +1,6 @@
 package ua.nure.notes.ui.main
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import ua.nure.notes.database.*
@@ -11,7 +10,19 @@ class NotificationListViewModel(
     private val notificationDao: NotificationDAO,
     private val userDao: UserDAO
 ) : ViewModel() {
-    val notificationsLiveData = notificationDao.getAllNotifications()
+    private val _allNotificationsLiveData = notificationDao.getAllNotifications()
+    private val _filterByNonReadLiveData = MutableLiveData<Boolean>()
+    val notificationsLiveData: LiveData<List<NotificationItem>> = Transformations.switchMap(
+        _filterByNonReadLiveData
+    ) { filterByNonRead ->
+        Transformations.map(_allNotificationsLiveData) { dataList ->
+            dataList.filter { if (filterByNonRead) !it.isRead else true }
+        }
+    }
+
+    init {
+        _filterByNonReadLiveData.value = false
+    }
 
     fun deleteNotification(notificationId: DatabaseId) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -20,7 +31,7 @@ class NotificationListViewModel(
     }
 
     fun setFilterOptions(nonRead: Boolean) {
-
+        _filterByNonReadLiveData.value = nonRead
     }
 
     fun generateRandomData() {
