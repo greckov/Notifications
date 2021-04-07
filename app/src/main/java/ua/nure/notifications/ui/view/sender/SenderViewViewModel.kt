@@ -1,18 +1,18 @@
-package ua.nure.notes.ui.view.sender
+package ua.nure.notifications.ui.view.sender
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ua.nure.notes.database.DatabaseId
-import ua.nure.notes.database.UserDAO
+import ua.nure.notifications.database.DatabaseId
+import ua.nure.notifications.database.UserDAO
 import java.util.*
 
 class SenderViewViewModel(private val userDAO: UserDAO) : ViewModel() {
     private var data: UserModel? = null
 
-    fun setOnDataCallback(userId: DatabaseId, onData: (note: UserModel) -> Unit) {
+    fun setOnDataCallback(userId: DatabaseId, onData: (user: UserModel) -> Unit) {
         if (data != null) {
             onData(data!!)
             return

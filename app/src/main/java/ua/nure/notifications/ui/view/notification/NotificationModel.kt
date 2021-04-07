@@ -1,6 +1,6 @@
-package ua.nure.notes.ui.view.notification
+package ua.nure.notifications.ui.view.notification
 
-import ua.nure.notes.database.DatabaseId
+import ua.nure.notifications.database.DatabaseId
 import java.util.*
 
 data class NotificationModel(

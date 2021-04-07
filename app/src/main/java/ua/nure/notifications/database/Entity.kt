@@ -1,4 +1,4 @@
-package ua.nure.notes.database
+package ua.nure.notifications.database
 
 import androidx.room.*
 
@@ -28,7 +28,7 @@ data class UserItem(
 data class NotificationItem(
     @PrimaryKey(autoGenerate = true)
     val id: DatabaseId = 0,
-    @ColumnInfo(name = "sender_id")
+    @ColumnInfo(name = "sender_id", index = true)
     val senderId: Int,
     val content: String,
     @ColumnInfo(name = "created_at_ts")

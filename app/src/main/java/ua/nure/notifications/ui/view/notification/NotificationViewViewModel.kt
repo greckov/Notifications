@@ -1,4 +1,4 @@
-package ua.nure.notes.ui.view.notification
+package ua.nure.notifications.ui.view.notification
 
 
 import androidx.lifecycle.ViewModel
@@ -7,9 +7,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import ua.nure.notes.database.DatabaseId
-import ua.nure.notes.database.NotificationDAO
-import ua.nure.notes.database.UserDAO
+import ua.nure.notifications.database.DatabaseId
+import ua.nure.notifications.database.NotificationDAO
+import ua.nure.notifications.database.UserDAO
 import java.util.*
 
 
@@ -19,7 +19,7 @@ class NotificationViewViewModel(
 ): ViewModel() {
     private var data: NotificationModel? = null
 
-    fun setOnDataCallback(notificationId: DatabaseId, onData: (note: NotificationModel) -> Unit) {
+    fun setOnDataCallback(notificationId: DatabaseId, onData: (notification: NotificationModel) -> Unit) {
         if (data != null) {
             onData(data!!)
             return

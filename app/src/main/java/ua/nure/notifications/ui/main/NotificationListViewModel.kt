@@ -1,10 +1,10 @@
-package ua.nure.notes.ui.main
+package ua.nure.notifications.ui.main
 
 import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import ua.nure.notes.database.*
-import ua.nure.notes.getCurrentUnixTime
+import ua.nure.notifications.database.*
+import ua.nure.notifications.getCurrentUnixTime
 
 class NotificationListViewModel(
     private val notificationDao: NotificationDAO,

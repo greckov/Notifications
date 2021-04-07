@@ -1,4 +1,4 @@
-package ua.nure.notes
+package ua.nure.notifications
 
 import android.graphics.Rect
 import android.view.View

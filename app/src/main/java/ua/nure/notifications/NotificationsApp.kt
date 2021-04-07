@@ -1,4 +1,4 @@
-package ua.nure.notes
+package ua.nure.notifications
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext

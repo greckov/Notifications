@@ -1,12 +1,12 @@
-package ua.nure.notes
+package ua.nure.notifications
 
 import androidx.room.Room
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import ua.nure.notes.database.AppDatabase
-import ua.nure.notes.ui.main.NotificationListViewModel
-import ua.nure.notes.ui.view.notification.NotificationViewViewModel
-import ua.nure.notes.ui.view.sender.SenderViewViewModel
+import ua.nure.notifications.database.AppDatabase
+import ua.nure.notifications.ui.main.NotificationListViewModel
+import ua.nure.notifications.ui.view.notification.NotificationViewViewModel
+import ua.nure.notifications.ui.view.sender.SenderViewViewModel
 
 val databaseModule = module {
     single {

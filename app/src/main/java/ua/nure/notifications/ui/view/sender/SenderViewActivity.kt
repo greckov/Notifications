@@ -1,14 +1,13 @@
-package ua.nure.notes.ui.view.sender
+package ua.nure.notifications.ui.view.sender
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Database
 import org.koin.android.viewmodel.ext.android.viewModel
-import ua.nure.notes.R
-import ua.nure.notes.database.DatabaseId
-import ua.nure.notes.databinding.ActivityViewSenderBinding
+import ua.nure.notifications.R
+import ua.nure.notifications.database.DatabaseId
+import ua.nure.notifications.databinding.ActivityViewSenderBinding
 
 private const val ITEM_ID_ARG = "user_id"
 

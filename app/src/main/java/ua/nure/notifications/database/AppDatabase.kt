@@ -1,4 +1,4 @@
-package ua.nure.notes.database
+package ua.nure.notifications.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

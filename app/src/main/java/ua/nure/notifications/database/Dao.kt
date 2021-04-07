@@ -1,7 +1,6 @@
-package ua.nure.notes.database
+package ua.nure.notifications.database
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 
 

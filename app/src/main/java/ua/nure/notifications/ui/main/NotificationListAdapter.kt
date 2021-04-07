@@ -1,10 +1,10 @@
-package ua.nure.notes.ui.main
+package ua.nure.notifications.ui.main
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import ua.nure.notes.database.DatabaseId
-import ua.nure.notes.database.NotificationItem
-import ua.nure.notes.databinding.ItemNotificationListBinding
+import ua.nure.notifications.database.DatabaseId
+import ua.nure.notifications.database.NotificationItem
+import ua.nure.notifications.databinding.ItemNotificationListBinding
 
 
 private typealias ClickHandler = (id: DatabaseId) -> Unit

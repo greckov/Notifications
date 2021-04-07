@@ -1,6 +1,6 @@
-package ua.nure.notes.ui.view.sender
+package ua.nure.notifications.ui.view.sender
 
-import ua.nure.notes.database.DatabaseId
+import ua.nure.notifications.database.DatabaseId
 import java.util.*
 
 data class UserModel(

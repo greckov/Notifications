@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "ua.nure.notes"
+        applicationId "ua.nure.notifications"
         minSdkVersion 29
         targetSdkVersion 30
         versionCode 1

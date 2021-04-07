@@ -1,4 +1,4 @@
-package ua.nure.notes.database
+package ua.nure.notifications.database
 
 // Database entity id type
 typealias DatabaseId = Int
