@@ -1,17 +1,38 @@
 package ua.nure.notes.database
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 
-@Entity(tableName = "note")
-data class NoteItem(
+
+@Entity(tableName = "users")
+data class UserItem(
     @PrimaryKey(autoGenerate = true)
     val id: DatabaseId = 0,
-    val timestamp: Long,
-    val text: String,
-    @ColumnInfo(name = "is_primary")
-    val isPrimary: Boolean,
-    @ColumnInfo(name = "is_deleted")
-    val isDeleted: Boolean = false
+    val email: String,
+    val username: String,
+    @ColumnInfo(name = "full_name")
+    val fullName: String,
+    val age: Int,
+    @ColumnInfo(name = "created_at_ts")
+    val createdAtTs: Long
+)
+
+@Entity(
+    tableName = "notifications",
+    foreignKeys = [ForeignKey(
+        entity = UserItem::class,
+        parentColumns = ["id"],
+        childColumns = ["sender_id"],
+        onDelete = ForeignKey.CASCADE
+    )]
+)
+data class NotificationItem(
+    @PrimaryKey(autoGenerate = true)
+    val id: DatabaseId = 0,
+    @ColumnInfo(name = "sender_id")
+    val senderId: Int,
+    val content: String,
+    @ColumnInfo(name = "created_at_ts")
+    val createdAtTs: Long,
+    @ColumnInfo(name = "is_read")
+    val isRead: Boolean
 )

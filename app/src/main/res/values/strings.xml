@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">Notes</string>
-    <string name="splash_message">App is loading…</string>
-    <string name="note_list_title">Your notes</string>
-    <string name="util_add_button">Add item</string>
-    <string name="action_save_note">Save Note</string>
-    <string name="title_note_creation">Note creation</string>
-    <string name="hint_text_input">Text</string>
-    <string name="util_is_primary">Is primary</string>
-    <string name="error_required_field">This field is required</string>
-    <string name="menu_clear_all">Clear All</string>
-    <string name="menu_deleted_notes">Deleted notes</string>
-    <string name="btn_recover_selected">Recover selected</string>
-    <string name="title_your_deleted_notes">Your deleted notes</string>
+    <string name="app_name">Notifications</string>
+    <string name="btn_generate_random_data">Generate random</string>
+    <string name="label_only_non_read">Only non read</string>
+    <string name="btn_delete">delete</string>
+    <string name="btn_action_delete_and_back">Delete and Back</string>
+    <string name="btn_back">Back</string>
+    <string name="title_notification_name">Notification №%d</string>
+    <string name="field_sent_by">Sent by: %s</string>
+    <string name="field_to_me">To: me</string>
+    <string name="title_user_name">User: %s</string>
+    <string name="field_user_fullname">FullName: %s</string>
+    <string name="field_user_age">Age: %d</string>
+    <string name="field_joined">Joined: %s</string>
 </resources>
